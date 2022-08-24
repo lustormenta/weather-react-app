@@ -11,7 +11,7 @@ import "react-toastify/dist/ReactToastify.css";
 import TiempoYUbicacion from "./components/TiempoYUbicacion";
 
 function App() {
-  const [query, setQuery] = useState({ q: "palermo,ar" });
+  const [query, setQuery] = useState({ q: "buenos aires" });
   const [units, setUnits] = useState("metric");
   const [weather, setWeather] = useState(null);
 
@@ -19,11 +19,11 @@ function App() {
     const fetchWeather = async () => {
       const message = query.q ? query.q : "current location.";
 
-      toast.info("Fetching weather for " + message);
+      toast.info("Buscando clima de " + message);
 
       await getFormattedWeatherData({ ...query, units }).then((data) => {
         toast.success(
-          `Successfully fetched weather for ${data.name}, ${data.country}.`
+          `Obtuvo con éxito el tiempo de ${data.name}, ${data.country}.`
         );
 
         setWeather(data);

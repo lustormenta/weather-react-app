@@ -11,7 +11,7 @@ import "react-toastify/dist/ReactToastify.css";
 import TiempoYUbicacion from "./components/TiempoYUbicacion";
 
 function App() {
-  const [query, setQuery] = useState({ q: "berlin" });
+  const [query, setQuery] = useState({ q: "palermo,ar" });
   const [units, setUnits] = useState("metric");
   const [weather, setWeather] = useState(null);
 
